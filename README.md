@@ -1,2 +1,2 @@
-# BLoCKchain_rusted
+# BLoCKchain smart contracts with etherium
 Coming soon....
