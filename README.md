@@ -1,2 +1,2 @@
 # BLoCKchain smart contracts with etherium
-Coming soon....
+An application developed on blockchain that runs on ether.
