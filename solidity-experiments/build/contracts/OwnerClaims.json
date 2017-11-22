@@ -1,0 +1,1014 @@
+{
+  "contractName": "OwnerClaims",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ],
+      "name": "setDefaultClaim",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ],
+      "name": "setClaim",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "key",
+          "type": "string"
+        }
+      ],
+      "name": "getClaim",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "defaultKey",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "getDefaultClaim",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6107628061001e6000396000f30060606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631eba7c7a146100725780632df3f82a146100cf57806358924b811461016f57806386a3cd2714610264578063cd56f019146102f2575b600080fd5b341561007d57600080fd5b6100cd600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506103a4565b005b34156100da57600080fd5b61016d600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506103e6565b005b341561017a57600080fd5b6101e9600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506104a6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561022957808201518184015260208101905061020e565b50505050905090810190601f1680156102565780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561026f57600080fd5b6102776105f6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102b757808201518184015260208101905061029c565b50505050905090810190601f1680156102e45780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156102fd57600080fd5b610329600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061062f565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561036957808201518184015260208101905061034e565b50505050905090810190601f1680156103965780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103e36040805190810160405280600781526020017f64656661756c7400000000000000000000000000000000000000000000000000815250826103e6565b50565b806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020836040518082805190602001908083835b60208310151561045b5780518252602082019150602081019050602083039250610436565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902090805190602001906104a192919061067d565b505050565b6104ae6106fd565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020826040518082805190602001908083835b60208310151561052257805182526020820191506020810190506020830392506104fd565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390208054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105e95780601f106105be576101008083540402835291602001916105e9565b820191906000526020600020905b8154815290600101906020018083116105cc57829003601f168201915b5050505050905092915050565b6040805190810160405280600781526020017f64656661756c740000000000000000000000000000000000000000000000000081525081565b6106376106fd565b610676826040805190810160405280600781526020017f64656661756c74000000000000000000000000000000000000000000000000008152506104a6565b9050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106be57805160ff19168380011785556106ec565b828001600101855582156106ec579182015b828111156106eb5782518255916020019190600101906106d0565b5b5090506106f99190610711565b5090565b602060405190810160405280600081525090565b61073391905b8082111561072f576000816000905550600101610717565b5090565b905600a165627a7a7230582037bc6953e29951210e6d93f6c18a727f53c33aab7f07a4c4f6caf6de813c09e70029",
+  "deployedBytecode": "0x60606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631eba7c7a146100725780632df3f82a146100cf57806358924b811461016f57806386a3cd2714610264578063cd56f019146102f2575b600080fd5b341561007d57600080fd5b6100cd600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506103a4565b005b34156100da57600080fd5b61016d600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506103e6565b005b341561017a57600080fd5b6101e9600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506104a6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561022957808201518184015260208101905061020e565b50505050905090810190601f1680156102565780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561026f57600080fd5b6102776105f6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102b757808201518184015260208101905061029c565b50505050905090810190601f1680156102e45780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156102fd57600080fd5b610329600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061062f565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561036957808201518184015260208101905061034e565b50505050905090810190601f1680156103965780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103e36040805190810160405280600781526020017f64656661756c7400000000000000000000000000000000000000000000000000815250826103e6565b50565b806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020836040518082805190602001908083835b60208310151561045b5780518252602082019150602081019050602083039250610436565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902090805190602001906104a192919061067d565b505050565b6104ae6106fd565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020826040518082805190602001908083835b60208310151561052257805182526020820191506020810190506020830392506104fd565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390208054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105e95780601f106105be576101008083540402835291602001916105e9565b820191906000526020600020905b8154815290600101906020018083116105cc57829003601f168201915b5050505050905092915050565b6040805190810160405280600781526020017f64656661756c740000000000000000000000000000000000000000000000000081525081565b6106376106fd565b610676826040805190810160405280600781526020017f64656661756c74000000000000000000000000000000000000000000000000008152506104a6565b9050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106be57805160ff19168380011785556106ec565b828001600101855582156106ec579182015b828111156106eb5782518255916020019190600101906106d0565b5b5090506106f99190610711565b5090565b602060405190810160405280600081525090565b61073391905b8082111561072f576000816000905550600101610717565b5090565b905600a165627a7a7230582037bc6953e29951210e6d93f6c18a727f53c33aab7f07a4c4f6caf6de813c09e70029",
+  "sourceMap": "25:573:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:573:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;389:83;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;172:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;270:113;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:45:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;478:117:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;389:83:0;438:27;447:10;;;;;;;;;;;;;;;;;;459:5;438:8;:27::i;:::-;389:83;:::o;172:92::-;252:5;226:6;:18;233:10;226:18;;;;;;;;;;;;;;;245:3;226:23;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;226:31:0;;;;;;;;;;;;:::i;:::-;;172:92;;:::o;270:113::-;333:6;;:::i;:::-;358;:13;365:5;358:13;;;;;;;;;;;;;;;372:3;358:18;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;351:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;270:113;;;;:::o;53:45::-;;;;;;;;;;;;;;;;;;;;:::o;478:117::-;536:6;;:::i;:::-;561:27;570:5;577:10;;;;;;;;;;;;;;;;;;561:8;:27::i;:::-;554:34;;478:117;;;:::o;25:573::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.4;\n\ncontract OwnerClaims {\n\n    string constant public defaultKey = \"default\";\n\n    mapping(address => mapping(string => string)) private owners;\n\n    function setClaim(string key, string value) {\n        owners[msg.sender][key] = value;\n    }\n\n    function getClaim(address owner, string key) constant returns (string) {\n        return owners[owner][key];\n    }\n\n    function setDefaultClaim(string value) {\n        setClaim(defaultKey, value);\n    }\n\n    function getDefaultClaim(address owner) constant returns (string) {\n        return getClaim(owner, defaultKey);\n    }\n\n}\n",
+  "sourcePath": "/home/vishal/Github/BLoCKchain/solidity-experiments/contracts/owner_claim.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/vishal/Github/BLoCKchain/solidity-experiments/contracts/owner_claim.sol",
+      "exportedSymbols": {
+        "OwnerClaims": [
+          68
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".4"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            68
+          ],
+          "name": "OwnerClaims",
+          "scope": 69
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": true,
+              "name": "defaultKey",
+              "scope": 68,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string memory",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string storage pointer"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "53:6:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "64656661756c74",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "string",
+                  "type": "literal_string \"default\"",
+                  "value": "default"
+                },
+                "id": 3,
+                "name": "Literal",
+                "src": "89:9:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "53:45:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owners",
+              "scope": 68,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => mapping(string memory => string storage ref))",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => mapping(string memory => string storage ref))"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 5,
+                    "name": "ElementaryTypeName",
+                    "src": "113:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "type": "mapping(string memory => string storage ref)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 6,
+                        "name": "ElementaryTypeName",
+                        "src": "132:6:0"
+                      },
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 7,
+                        "name": "ElementaryTypeName",
+                        "src": "142:6:0"
+                      }
+                    ],
+                    "id": 8,
+                    "name": "Mapping",
+                    "src": "124:25:0"
+                  }
+                ],
+                "id": 9,
+                "name": "Mapping",
+                "src": "105:45:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "105:60:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "setClaim",
+              "payable": false,
+              "scope": 68,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "key",
+                      "scope": 27,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 11,
+                        "name": "ElementaryTypeName",
+                        "src": "190:6:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "VariableDeclaration",
+                    "src": "190:10:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "value",
+                      "scope": 27,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 13,
+                        "name": "ElementaryTypeName",
+                        "src": "202:6:0"
+                      }
+                    ],
+                    "id": 14,
+                    "name": "VariableDeclaration",
+                    "src": "202:12:0"
+                  }
+                ],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "189:26:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 16,
+                "name": "ParameterList",
+                "src": "216:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "mapping(string memory => string storage ref)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 10,
+                                      "type": "mapping(address => mapping(string memory => string storage ref))",
+                                      "value": "owners"
+                                    },
+                                    "id": 17,
+                                    "name": "Identifier",
+                                    "src": "226:6:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "referencedDeclaration": null,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 109,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 18,
+                                        "name": "Identifier",
+                                        "src": "233:3:0"
+                                      }
+                                    ],
+                                    "id": 19,
+                                    "name": "MemberAccess",
+                                    "src": "233:10:0"
+                                  }
+                                ],
+                                "id": 21,
+                                "name": "IndexAccess",
+                                "src": "226:18:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 12,
+                                  "type": "string memory",
+                                  "value": "key"
+                                },
+                                "id": 20,
+                                "name": "Identifier",
+                                "src": "245:3:0"
+                              }
+                            ],
+                            "id": 22,
+                            "name": "IndexAccess",
+                            "src": "226:23:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "string memory",
+                              "value": "value"
+                            },
+                            "id": 23,
+                            "name": "Identifier",
+                            "src": "252:5:0"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "Assignment",
+                        "src": "226:31:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "ExpressionStatement",
+                    "src": "226:31:0"
+                  }
+                ],
+                "id": 26,
+                "name": "Block",
+                "src": "216:48:0"
+              }
+            ],
+            "id": 27,
+            "name": "FunctionDefinition",
+            "src": "172:92:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getClaim",
+              "payable": false,
+              "scope": 68,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "owner",
+                      "scope": 43,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 28,
+                        "name": "ElementaryTypeName",
+                        "src": "288:7:0"
+                      }
+                    ],
+                    "id": 29,
+                    "name": "VariableDeclaration",
+                    "src": "288:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "key",
+                      "scope": 43,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 30,
+                        "name": "ElementaryTypeName",
+                        "src": "303:6:0"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "VariableDeclaration",
+                    "src": "303:10:0"
+                  }
+                ],
+                "id": 32,
+                "name": "ParameterList",
+                "src": "287:27:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 43,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 33,
+                        "name": "ElementaryTypeName",
+                        "src": "333:6:0"
+                      }
+                    ],
+                    "id": 34,
+                    "name": "VariableDeclaration",
+                    "src": "333:6:0"
+                  }
+                ],
+                "id": 35,
+                "name": "ParameterList",
+                "src": "332:8:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 35
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "mapping(string memory => string storage ref)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "mapping(address => mapping(string memory => string storage ref))",
+                                  "value": "owners"
+                                },
+                                "id": 36,
+                                "name": "Identifier",
+                                "src": "358:6:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "address",
+                                  "value": "owner"
+                                },
+                                "id": 37,
+                                "name": "Identifier",
+                                "src": "365:5:0"
+                              }
+                            ],
+                            "id": 38,
+                            "name": "IndexAccess",
+                            "src": "358:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 31,
+                              "type": "string memory",
+                              "value": "key"
+                            },
+                            "id": 39,
+                            "name": "Identifier",
+                            "src": "372:3:0"
+                          }
+                        ],
+                        "id": 40,
+                        "name": "IndexAccess",
+                        "src": "358:18:0"
+                      }
+                    ],
+                    "id": 41,
+                    "name": "Return",
+                    "src": "351:25:0"
+                  }
+                ],
+                "id": 42,
+                "name": "Block",
+                "src": "341:42:0"
+              }
+            ],
+            "id": 43,
+            "name": "FunctionDefinition",
+            "src": "270:113:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "setDefaultClaim",
+              "payable": false,
+              "scope": 68,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "value",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 44,
+                        "name": "ElementaryTypeName",
+                        "src": "414:6:0"
+                      }
+                    ],
+                    "id": 45,
+                    "name": "VariableDeclaration",
+                    "src": "414:12:0"
+                  }
+                ],
+                "id": 46,
+                "name": "ParameterList",
+                "src": "413:14:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 47,
+                "name": "ParameterList",
+                "src": "428:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 27,
+                              "type": "function (string memory,string memory)",
+                              "value": "setClaim"
+                            },
+                            "id": 48,
+                            "name": "Identifier",
+                            "src": "438:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4,
+                              "type": "string memory",
+                              "value": "defaultKey"
+                            },
+                            "id": 49,
+                            "name": "Identifier",
+                            "src": "447:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 45,
+                              "type": "string memory",
+                              "value": "value"
+                            },
+                            "id": 50,
+                            "name": "Identifier",
+                            "src": "459:5:0"
+                          }
+                        ],
+                        "id": 51,
+                        "name": "FunctionCall",
+                        "src": "438:27:0"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "ExpressionStatement",
+                    "src": "438:27:0"
+                  }
+                ],
+                "id": 53,
+                "name": "Block",
+                "src": "428:44:0"
+              }
+            ],
+            "id": 54,
+            "name": "FunctionDefinition",
+            "src": "389:83:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getDefaultClaim",
+              "payable": false,
+              "scope": 68,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "owner",
+                      "scope": 67,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 55,
+                        "name": "ElementaryTypeName",
+                        "src": "503:7:0"
+                      }
+                    ],
+                    "id": 56,
+                    "name": "VariableDeclaration",
+                    "src": "503:13:0"
+                  }
+                ],
+                "id": 57,
+                "name": "ParameterList",
+                "src": "502:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 67,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 58,
+                        "name": "ElementaryTypeName",
+                        "src": "536:6:0"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "VariableDeclaration",
+                    "src": "536:6:0"
+                  }
+                ],
+                "id": 60,
+                "name": "ParameterList",
+                "src": "535:8:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 60
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "string memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 43,
+                              "type": "function (address,string memory) view returns (string memory)",
+                              "value": "getClaim"
+                            },
+                            "id": 61,
+                            "name": "Identifier",
+                            "src": "561:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 56,
+                              "type": "address",
+                              "value": "owner"
+                            },
+                            "id": 62,
+                            "name": "Identifier",
+                            "src": "570:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4,
+                              "type": "string memory",
+                              "value": "defaultKey"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "577:10:0"
+                          }
+                        ],
+                        "id": 64,
+                        "name": "FunctionCall",
+                        "src": "561:27:0"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "Return",
+                    "src": "554:34:0"
+                  }
+                ],
+                "id": 66,
+                "name": "Block",
+                "src": "544:51:0"
+              }
+            ],
+            "id": 67,
+            "name": "FunctionDefinition",
+            "src": "478:117:0"
+          }
+        ],
+        "id": 68,
+        "name": "ContractDefinition",
+        "src": "25:573:0"
+      }
+    ],
+    "id": 69,
+    "name": "SourceUnit",
+    "src": "0:599:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-22T17:09:19.636Z"
+}

@@ -460,8 +460,13 @@
       "events": {},
       "links": {},
       "address": "0xb2af4dfad0844100fa36c8dea8f41e7ce2ed2ae1"
+    },
+    "1511370524659": {
+      "events": {},
+      "links": {},
+      "address": "0xab56119459f743fa73de31b20b289554ae7f4332"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-21T16:59:23.145Z"
+  "updatedAt": "2017-11-22T17:09:57.381Z"
 }
